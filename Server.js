@@ -90,7 +90,7 @@ app.use('/', require('./tipo')(model));
 app.use('/', require('./deporte')(model));
 app.use('/', require('./torneo')(model));
 app.use('/', require('./pais')(model));
-//app.use('/', require('./deporte')(model));
+app.use('/', require('./equipo')(model));
 
 /* 
 app.get('/usuarios', function (req, res) {
