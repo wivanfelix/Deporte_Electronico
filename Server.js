@@ -91,6 +91,8 @@ app.use('/', require('./deporte')(model));
 app.use('/', require('./torneo')(model));
 app.use('/', require('./pais')(model));
 app.use('/', require('./equipo')(model));
+app.use('/', require('./equipo_deporte')(model));
+//app.use('/', require('./torneo_equipoDeporte')(model));
 
 /* 
 app.get('/usuarios', function (req, res) {
