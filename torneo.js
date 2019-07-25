@@ -38,26 +38,26 @@ module.exports = function tipoModule(model) {
         var input = req.body;
         var id = req.params.id;
         model.Torneo.update({
-            nombre_Deporte: input.nombre_Deporte,
-            descripcion_Deporte: input.descripcion_Deporte
+            nombre_Torneo: input.nombre_Torneo,
+            administrador_Torneo: input.administrador_Torneo
         }, {
                 where: {
                     id: id
                 }
-            }).then(function (deporte) {
-                res.json(deporte);
+            }).then(function (torneo) {
+                res.json(torneo);
         });
     });
 
 
-    torneoRouter.delete('/deportes/:id', function (req, res) {
+    torneoRouter.delete('/torneos/:id', function (req, res) {
         var id = req.params.id;
-        model.Deporte.destroy({
+        model.Torneo.destroy({
             where: {
                 id: id
             }
-        }).then(function (deporte) {
-            res.json(deporte);
+        }).then(function (torneo) {
+            res.json(torneo);
         });
     });
 
